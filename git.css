@@ -1,0 +1,66 @@
+/* Traits généraux de page*/
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+main#global{
+    position: absolute;
+    width: 960px;
+    left: 50%;
+    margin-left: -480px;
+    margin-top: 10px;
+}
+
+/* Header */
+
+header{
+    margin-left: 100px;
+    margin-right: 40px;
+    background-color: rgb(218, 233, 238);
+    height: 300px;
+    border-radius: 5%;
+    padding-top: 30px;
+    border: black solid 3px;
+}
+
+h1, h2{
+    text-align: center;
+    color: darkblue;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+header p{
+    text-indent: 120px;
+}
+
+/* Propriétés du tableau */
+
+table{
+    width: 940px;
+    margin: 80px;
+    padding: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    float: center;
+}
+
+table caption{
+    font-weight: bold;
+}
+td#commande{
+    font-family: 'Courier New', Courier, monospace;
+    width: 400px;
+}
+
+td{
+    width: 1500px;
+}

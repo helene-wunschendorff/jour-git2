@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commandes GitHub</title>
+    <link rel="stylesheet" href="git.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>GitHub</h1>
+        <h2>Aide-mémoire GitHub Git</h2>
+        <p>Git est le système de gestion de version décentralisé open source qui facilite les activités GitHub sur votre ordinateur.</p>
+        <p>Cet aide-mémoire permet un accès rapide aux instructions des commandes Git les plus utilisées.</p>
+    </header>
+    
+    <main class="global">
+
+        <table class="commandes">
+            <caption>Commandes de GitHub</caption>
+
+<!-- Titres des colonnes -->            
+            <tr class="titres">
+                <th>Commandes</th>
+                <th>Description</th>  
+            </tr>
+
+<!-- Partie 1 : Configuration des outils -->
+
+            <tr>
+                <td id="type1">Configuration des outils</td>
+                <td>Configurer les informations de l'utilisateur pour tous les dépôts locaux</td>
+            </tr>
+
+            <tr>
+                <td id="commande">$ git config --global user.name "[nom]</td>
+                <td>Définit le nom que vous voulez associer à toutes vos opérations de commit</td>
+            </tr>
+
+            <tr>
+                <td id="commande">$ git config --global user.email "[adresse email]"</td>
+                <td>Définit l'email que vous voulez associer à toutes vos opérations de committ</td>
+            </tr>
+
+            <tr>
+                <td id="commande">$ git config --global color.ui auto</td>
+                <td>Active la colorisation de la sortie en ligne de commande</td>
+            </tr>
+
+<!--Partie 2 : Dépôts -->
+            <tr>
+                <td id="type2">Créer des dépôts</td>
+                <td>Démarrer un nouveau dépôt ou en obtenir un depuis une URL existante</td>
+                
+            </tr>
+
+            <tr>
+                <td id="commande">§ git init [nom-du-projet]</td>
+                <td>Crée un dépôt local à partir du nom spécifié</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git clone [url]</td>
+                <td>Télécharge un projet et tout son historique de versions</td>
+            </tr>
+
+<!--Partie 3 : Changements et commits-->
+            <tr>
+                <td id="type3">Effectuer des changements</td>
+                <td>Consulter les modifications et effectuer une opération de commit</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git status</td>
+                <td>Liste tous les nouveaux fichiers et les fichiers modifiés à commiter</td>
+            </tr>
+            <tr>
+                <td id="commande">§ git diff</td>
+                <td>Montre les modifications de fichier qui ne sont pas encore indexés</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git add [fichier]</td>
+                <td>Ajoute un instantané du fichier, en préparation pour le suivi de version</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git diff --staged</td>
+                <td>Montre les différences de fichier entre la version indexée et la dernière version</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git reset [fichier]</td>
+                <td>Enlève le fichier de l'index, mais conserve son contenu</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git commit -m "[message descriptif]"</td>
+                <td>Enregistre des instantanés de fichiers de façon permanente dans l'historique des versions</td>
+            </tr>
+
+<!--Partie 4 : Groupes de changements -->
+            <tr>
+                <td id="type4">Grouper des changements</td>
+                <td>Nommer une série de commits et combiner les résultats de travaux terminés</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git branch</td>
+                <td>Liste toutes les branches locales dans le dépôt courant</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git branch [nom-de-branche]</td>
+                <td>Crée une nouvelle branche</td>
+            </tr>
+            
+            <tr>
+                <td id="commande">§ git checkout [nom-de-branche]</td>
+                <td>Bascule sur la branche spécifiée et met à jour le répertoire de travail</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git merge [nom-de-branche]</td>
+                <td>Combine dans la branche courante l'historique de la branche spécifiée</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git branch -d [nom-de-branche]</td>
+                <td>Supprime la branche spécifiée</td>
+            </tr>
+ 
+<!--Partie 5 : Changements sur les fichiers-->
+            <tr>
+                <td id="type5">Changements au niveau des noms de fichiers</td>
+                <td>Déplacer et supprimer des fichiers sous suivi de version</td>
+            </tr>    
+            
+            <tr>
+                <td id="commande">§git rm [fichier]</td>
+                <td>Supprime le fichier du répertoire de travail et met à jour l'index</td>
+            </tr>
+            <tr>
+                <td id="commande">§ git rm --cached [fichier]</td>
+                <td>Supprime le fichier du système de version mais le préserve</td>
+            </tr>
+            <tr>
+                <td id="commande">§ git mv [fichier-nom] [fichier-nouveau-nom]</td>
+                <td>Renomme le fichier et prépare le changement pour un commit</td>
+            </tr>
+
+<!-- Partie 6 : Exclure des fichiers -->
+            <tr>
+                <td id="type6">Exclure du suivi de version</td>
+                <td>Exclure des fichiers et chemins temporaires</td>
+            </tr>
+
+            <tr>
+                <td id="commande">*.log build/ temp.*</td>
+                <td>Un fichier texte nommé .gitignore permet d'éviter le suivi de version accidentel pour les fichiers et chemins correspondant aux patterns spécifiés</td>
+            </tr>
+            <tr>
+                <td id="commande">§ git ls-files --other --ignored --exclude-standard</td>
+                <td>Liste tous les fichiers exclus du suivi de version dans ce projet</td>
+            </tr>
+
+<!-- Partie 7 : Enregistrer morceaux -->
+            <tr>
+                <td id="type7">Enregistrer des fragments</td>
+                <td>Mettre en suspens des modifications non finies pour y revenir plus tard</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git stash</td>
+                <td>Enregistre de manière temporaire tous les fichiers sous suivi de version qui ont été modifiés ("remiser son travail")</td>
+            </tr>
+            <tr>
+                <td id="commande">§ git stash pop</td>
+                <td>Applique une remise et la supprime immédiatement</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git stash list</td>
+                <td>Liste toutes les remises</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git stash drop</td>
+                <td>Supprime la remise la plus récente</td>
+            </tr>
+
+<!-- Partie 8 : Historique des versions -->            
+            <tr>
+                <td id="type8">Vérifier l'historique des versions</td>
+                <td>Suivre et inspecter l'évolution des fichiers du projet</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git log</td>
+                <td>Montre l'historique des versions pour la branche courante</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git log --follow [fichier]</td>
+                <td>Montre l'historique des versions, y compris les actions de renommage pour le fichier spécifié</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git diff [premiere-branche]---[deuxieme-branche]</td>
+                <td>Montre les différences de contenu entre deux branches</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git show [commit]</td>
+                <td>Montre les modifications de métadonnées et de contenu inclues dans le commit spécifié</td>
+            </tr>
+
+<!-- Partie 9 : Corrections -->            
+            <tr>
+                <td id="type9">Refaire des commits</td>
+                <td>Corriger des erreurs et gérer l'historique des corrections</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git reset [commit]</td>
+                <td>Annule tous les commits après '[commit]', en conservant les modifications localement</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git reset --hard [commit]</td>
+                <td>Supprime tout l'historique et les modifications effectuées après le commit spécifié</td>
+            </tr>
+
+<!-- Partie 10 : Synchroniser changements -->
+            <tr>
+                <td id="type10">Synchroniser les changements</td>
+                <td>Référencer un dépôt distant et synchroniser l'historique de versions</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git fetch [nom-de-depot]</td>
+                <td>Récupère tout l'historique du dépôt nommé</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git merge [nom-de-depot]/[branche]</td>
+                <td>Fusionne la branche du dépôt dans la branche locale courante</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git push [alias] [branche]</td>
+                <td>Envoie tous les commits de la branche locale vers GitHub</td>
+            </tr>
+
+            <tr>
+                <td id="commande">§ git pull</td>
+                <td>Récupère tout l'historique du dépôt nommé et incorpore les modifications</td>
+            </tr>
+            
+        </table>
+    </main>
+    
+
+
+</body>
+
+
+</html>
